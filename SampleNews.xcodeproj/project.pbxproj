@@ -14,6 +14,7 @@
 		5903AC682AE2286F003C320D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5903AC672AE2286F003C320D /* NetworkManager.swift */; };
 		5903AC6A2AE228AA003C320D /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5903AC692AE228AA003C320D /* PostData.swift */; };
 		5903AC6D2AE229E7003C320D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5903AC6C2AE229E7003C320D /* DetailView.swift */; };
+		5903AC742AE610D6003C320D /* PosterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5903AC732AE610D6003C320D /* PosterImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5903AC672AE2286F003C320D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5903AC692AE228AA003C320D /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		5903AC6C2AE229E7003C320D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5903AC732AE610D6003C320D /* PosterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		5903AC582AE226FC003C320D /* SampleNews */ = {
 			isa = PBXGroup;
 			children = (
+				5903AC732AE610D6003C320D /* PosterImage.swift */,
 				5903AC592AE226FC003C320D /* SampleNewsApp.swift */,
 				5903AC6E2AE229EF003C320D /* View */,
 				5903AC6B2AE2298E003C320D /* Model */,
@@ -166,6 +169,7 @@
 				5903AC6A2AE228AA003C320D /* PostData.swift in Sources */,
 				5903AC5C2AE226FC003C320D /* ContentView.swift in Sources */,
 				5903AC6D2AE229E7003C320D /* DetailView.swift in Sources */,
+				5903AC742AE610D6003C320D /* PosterImage.swift in Sources */,
 				5903AC5A2AE226FC003C320D /* SampleNewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
