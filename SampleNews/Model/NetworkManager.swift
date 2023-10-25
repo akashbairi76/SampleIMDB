@@ -7,7 +7,7 @@ class NetworkManager: ObservableObject {
     @Published var posts = [Movie]()
     
     func fetchData() {
-        if let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=38a73d59546aa378980a88b645f487fc&language=en-US&page=1") {
+        if let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=38a73d59546aa378980a88b645f487fc&language=en-US") {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error == nil {

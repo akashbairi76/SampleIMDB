@@ -23,8 +23,7 @@ struct PosterImage: View {
         Group {
             if let imagePath = imagePath {
                 AsyncImage(url: URL(string: imagePath)) { image in
-                    image
-                        .resizable()
+                    image.resizable()
                         .clipShape(RoundedRectangle(cornerRadius: edgeRadius))
                 } placeholder: {
                     

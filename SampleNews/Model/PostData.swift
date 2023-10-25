@@ -25,4 +25,24 @@ struct Movie: Codable, Identifiable {
     var release_date: String?
     var title: String?
     var vote_average: Double?
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.overview = try container.decodeIfPresent(String.self, forKey: .overview)
+        self.popularity = try container.decode(Double.self, forKey: .popularity)
+        self.poster_path = try container.decodeIfPresent(String.self, forKey: .poster_path)
+        self.release_date = try container.decodeIfPresent(String.self, forKey: .release_date)
+        self.title = try container.decodeIfPresent(String.self, forKey: .title)
+        self.vote_average = try container.decode(Double.self, forKey: .vote_average)
+    }
+    
+    init() {
+        self.id = -1
+        self.overview = nil
+        self.popularity = nil
+        self.release_date = nil
+        self.title = nil
+        self.vote_average = nil
+    }
 }
