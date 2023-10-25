@@ -27,22 +27,25 @@ struct Movie: Codable, Identifiable {
     var vote_average: Double?
     
     init(from decoder: Decoder) throws {
+        // Create a container to hold the decoding context, which is based on the keys defined in CodingKeys.
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.overview = try container.decodeIfPresent(String.self, forKey: .overview)
-        self.popularity = try container.decode(Double.self, forKey: .popularity)
-        self.poster_path = try container.decodeIfPresent(String.self, forKey: .poster_path)
-        self.release_date = try container.decodeIfPresent(String.self, forKey: .release_date)
-        self.title = try container.decodeIfPresent(String.self, forKey: .title)
-        self.vote_average = try container.decode(Double.self, forKey: .vote_average)
+        
+        // Decode and assign values for each property using the container and their corresponding keys.
+        id           = try container.decode(Int.self, forKey: .id)
+        overview     = try container.decodeIfPresent(String.self, forKey: .overview)
+        popularity   = try container.decode(Double.self, forKey: .popularity)
+        poster_path  = try container.decodeIfPresent(String.self, forKey: .poster_path)
+        release_date = try container.decodeIfPresent(String.self, forKey: .release_date)
+        title        = try container.decodeIfPresent(String.self, forKey: .title)
+        vote_average = try container.decode(Double.self, forKey: .vote_average)
     }
     
     init() {
-        self.id = -1
-        self.overview = nil
-        self.popularity = nil
-        self.release_date = nil
-        self.title = nil
-        self.vote_average = nil
+        id = -1
+        overview = nil
+        popularity = nil
+        release_date = nil
+        title = nil
+        vote_average = nil
     }
 }

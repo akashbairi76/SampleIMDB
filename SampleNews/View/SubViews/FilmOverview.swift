@@ -1,9 +1,4 @@
-//
-//  FilmOverview.swift
-//  SampleNews
-//
-//  Created by Bairi Akash on 25/10/23.
-//
+
 
 import SwiftUI
 
